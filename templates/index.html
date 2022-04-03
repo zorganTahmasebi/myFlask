@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is very good</h1>
+    <p>Hello {{ user_name|striptags|upper }}</p>
+
+    {% for i in fav %}
+        {% if i == 'pasta' %}
+            <p>Hello pasta</p>
+        {% endif %}
+        <h1>{{i|upper}}</h1>
+    {% endfor %}
+
+    <p>{{ fav.0 | reverse}}</p>
+</body>
+</html>
